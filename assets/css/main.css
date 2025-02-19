@@ -2130,6 +2130,53 @@ ul.actions li:first-child {
     display: block;
 }
 
+/* Ensure the articles container flexes properly */
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Ensure article cards don't stretch too much */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* Restrict max width */
+    padding: 15px;
+}
+
+/* Image fixes: restrict size and ensure it fits */
+.article-card img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 350px; /* Ensures it does not overflow */
+    height: 180px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensures proper cropping without stretching */
+    border-radius: 8px; /* Smooth edges */
+}
+
+/* Ensure uniformity in text alignment */
+.article-card h3, 
+.article-card p {
+    max-width: 90%; /* Restrict text width for better alignment */
+    text-align: center;
+}
+
+/* Ensure proper centering */
+.aln-center {
+    justify-content: center;
+}
+
+/* Footer alignment */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* Icons */
 
 .icon {
